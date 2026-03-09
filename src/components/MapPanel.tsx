@@ -51,7 +51,7 @@ const MapPanel = ({ onMapClick, onParcelSelect, locateMode }: Props) => {
   const bounds = map.getBounds();
   const bbox = [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()].join(",");
 
-  const res = await fetch(`http://127.0.0.1:8000/api/lotes?bbox=${bbox}`);
+  const res = await fetch(`https://multijugate-unreligiously-cristal.ngrok-free.dev/api/lotes?bbox=${bbox}`);
   const data = await res.json();
   setIsLoading(false);
 
